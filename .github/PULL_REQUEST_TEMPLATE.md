@@ -1,27 +1,24 @@
 ## Description
 
-<!-- Briefly describe the change and its motivation. -->
+<!-- Briefly describe what model or tooling changes this PR introduces and why. -->
+<!-- For model changes, reference the Jira ticket (e.g., OCM-XXXXX). -->
 
 ## Type of Change
 
-- [ ] Bug fix (non-breaking change that fixes an issue)
-- [ ] New feature (non-breaking change that adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
+- [ ] Model change (new or modified types, resources, methods, or parameters)
+- [ ] Generated code update (`make update` after model change)
+- [ ] Breaking change (removes or renames existing model elements)
 - [ ] Documentation update
-- [ ] Refactoring (no functional changes)
 - [ ] CI/CD or tooling change
 
-## Testing
+## Verification
 
-<!-- Describe the tests you ran and how to reproduce them. -->
-
-- [ ] Unit tests pass (`make test`)
-- [ ] Integration tests pass (if applicable)
-- [ ] Manual verification completed
+- [ ] `make check` passes (model syntax validation)
+- [ ] `make verify` passes (generated code matches model)
+- [ ] `make lint` passes (indentation enforcement)
 
 ## Checklist
 
-- [ ] My code follows the project's coding conventions
-- [ ] I have updated documentation as needed
-- [ ] I have added tests that prove my fix/feature works
-- [ ] All new and existing tests pass
+- [ ] Model files follow the project's DSL conventions (see [README](../README.md#concepts))
+- [ ] Documentation comments use Markdown format
+- [ ] Generated `clientapi/` and `openapi/` are updated if model changed (`make update`)
